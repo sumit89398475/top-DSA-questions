@@ -1,0 +1,31 @@
+<!-- Write a function that takes an object and returns a new object with the keys and values swapped. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a function that takes an object and returns a new object with the
+      keys and values swapped.
+    </title>
+  </head>
+  <body>
+    <script>
+      function keyValueSwap(obj) {
+        const swappedobj = {};
+        for (let key in obj) {
+          const value = obj[key];
+          swappedobj[value] = key;
+        }
+        return swappedobj;
+      }
+
+      const original = {
+        name: "sumit",
+        age: 26,
+      };
+      console.log(keyValueSwap(original));
+    </script>
+  </body>
+</html>

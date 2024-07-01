@@ -1,0 +1,27 @@
+<!-- Write a JavaScript function to merge two arrays and remove duplicates. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function to merge two arrays and remove duplicates
+    </title>
+  </head>
+  <body>
+    <script>
+      function mergeSortArray(arr1, arr2) {
+        let mergeArray = arr1.concat(arr2);
+        console.log(mergeArray);
+      let filterArray=mergeArray.filter((data,index)=>{
+          return(
+           mergeArray.indexOf(data) === index 
+          )
+        })
+       return filterArray 
+      }
+    console.log(mergeSortArray([2, 3, 4], [5, 6, 7,2]));
+    </script>
+  </body>
+</html>

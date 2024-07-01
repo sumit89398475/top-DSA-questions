@@ -1,0 +1,30 @@
+<!-- Write a JavaScript function to create a new object that has properties copied from another object. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Write a JavaScript function to create a new object that has properties
+      copied from another object
+    </title>
+  </head>
+  <body>
+    <script>
+      function objectClone(obj) {
+        const clone = JSON.parse(JSON.stringify(obj));
+        return clone;
+      }
+
+      const original = {
+        a: 1,
+        b: {
+          c: 2,
+        },
+      };
+
+     console.log(objectClone(original)) 
+    </script>
+  </body>
+</html>

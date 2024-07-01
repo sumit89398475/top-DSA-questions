@@ -1,0 +1,27 @@
+<!-- Cheacking sum zero  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheacking sum zero</title>
+  </head>
+  <body>
+    <script>
+      function checkSumZero(array) {
+        for (let i = 0; i < array.length; i++) {
+          for (let j = 1; j < array.length; j++) {
+            if (array[i] - array[j] === 0) {
+              return [array[i], array[j]];
+            }
+          }
+        }
+      }
+
+      let array = [-5, -4, -3, -2, 0, -5, 4, 6, 8];
+      let result = checkSumZero(array);
+      console.log(result);
+    </script>
+  </body>
+</html>

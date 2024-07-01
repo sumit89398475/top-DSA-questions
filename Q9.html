@@ -1,0 +1,32 @@
+<!-- Count Largest sum of consecutive Digits -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Count Largest sum of consecutive Digits</title>
+  </head>
+  <body>
+    <script>
+      function largestSum(array, num) {
+        let max = 0;
+
+        for (let i = 0; i < array.length - num + 1; i++) {
+          let temp = 0;
+          for (let j = 0; j < num; j++) {
+            temp = array[j + i] + temp;
+            if (temp > max) {
+              max = temp;
+            }
+          }
+        }
+        return max;
+      }
+      let array = [1, 2, 3, 4,3,5,4,6,7,8];
+      let num = 4;
+      let result = largestSum(array, num);
+      console.log(result);
+    </script>
+  </body>
+</html>
